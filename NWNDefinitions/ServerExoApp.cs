@@ -5,25 +5,31 @@ using System.Text;
 using System.Runtime.InteropServices;
 namespace NWNDotNet.NWNDefinitions
 {
-    class ServerExoApp
+    public class ServerExoApp
     {
         static ServerExoApp()
         {
             //AppManager + 4 = ServerExoApp
-            FinalAddress = AppManager.FinalAddress += 0x4;
-            FinalAddress = (uint)AccessMemory.ProcessMemory.ReadPointer(FinalAddress);
+            FinalAddress = NWNDefinitions.AppManager.FinalAddress += 0x4;
+            FinalAddress = (uint)AccessMemory.ReadPointer(FinalAddress);
+           
+
         }
         public static uint FinalAddress = 0x0;
 
         #region Delegates
 
             [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-            public delegate int GetModuleLanguageDelegate(uint pThis);
+            delegate int GetModuleLanguageDelegate(uint pThis);
+
+            [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+            delegate uint GetGameObjectByIdDelegate(uint pThis, uint GameObjectID);
 
         #endregion
 
         #region Method Setup
-            public static GetModuleLanguageDelegate Internal_GetModuleLanguage = WhiteMagic.Magic.Instance.RegisterDelegate<GetModuleLanguageDelegate>(0x0042C900);
+            private static GetModuleLanguageDelegate Internal_GetModuleLanguage = WhiteMagic.Magic.Instance.RegisterDelegate<GetModuleLanguageDelegate>(0x0042C900);
+            private static GetGameObjectByIdDelegate Internal_GetGameObject = WhiteMagic.Magic.Instance.RegisterDelegate<GetGameObjectByIdDelegate>(0x0042C810);
         #endregion
 
         //0x0042C900
@@ -33,6 +39,16 @@ namespace NWNDotNet.NWNDefinitions
         }
 
 
+        //0x0042C810
+        public static uint GetGameObject(string uInt)
+        {
+            uint NewValue = (uint)System.Int32.Parse(uInt, System.Globalization.NumberStyles.HexNumber);
+
+            uint retVal = Internal_GetGameObject(FinalAddress,NewValue);
+            //Entities.CGenericObject obj = new Entities.CGenericObject(retVal);
+            //System.Windows.Forms.MessageBox.Show(obj.LastName.ToString());
+            return (uint)retVal;
+        }
 
 
 
