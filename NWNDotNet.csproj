@@ -49,9 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessMemory.cs" />
     <Compile Include="Hooks\MainLoop.cs" />
+    <Compile Include="NWNDefinitions\AppManager.cs" />
+    <Compile Include="NWNDefinitions\ServerExoApp.cs" />
     <Compile Include="NWNInternals\Internals.cs" />
-    <Compile Include="NWNInternals\ServerExoApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhiteMagic\Internals\DetourManager.cs" />
     <Compile Include="WhiteMagic\Internals\Manager.cs" />
