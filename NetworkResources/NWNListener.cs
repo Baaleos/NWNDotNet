@@ -148,25 +148,6 @@ namespace AsmodeiServices
                 DisconnectClient(newClient);
                 return;
 
-                string ARG = "";
-                string ARG2 = "";
-                switch (message.GetCommandType())
-                {
-                    case "SHOUT":
-                        ARG = message.GetCommandArgumentList()[0].ToString();
-                        NwnxAssembly.CBinding.RunAScript("nwnx_shout", ARG);
-                        break;
-
-                    default:
-                        try
-                        {
-                            ARG = message.GetCommandArgumentList()[0].ToString();
-                            ARG2 = message.GetCommandArgumentList()[1].ToString();
-                            NwnxAssembly.CBinding.RunAScript(ARG, ARG2);
-                        }
-                        catch (Exception ee) { }
-                        break;
-                }
                 
             }
             catch (Exception ee)
