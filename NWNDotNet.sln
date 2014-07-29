@@ -9,9 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhunDLL", "C:\Users\Baaleos\TFS\RhunDownloader\RhunDownloader\RhunDLL\RhunDLL.csproj", "{3DAF5882-F38A-4C04-8D22-4C6B7D820B38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsmodeiServices", "G:\Asmodei\AsmodeiPortal\AsmodeiServices\AsmodeiServices.csproj", "{F534E484-2E57-424D-8A4B-36DC8AD1E505}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
+		SccNumberOfProjects = 3
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://asmodei.net:8080/tfs/development
 		SccProjectUniqueName0 = C:\\Users\\Baaleos\\NWNX\\NWNX_Cool\\nwnx_cool\\nwnx_cool.vcxproj
@@ -24,6 +26,11 @@ Global
 		SccAuxPath1 = http://asmodei.net:8080/tfs/development
 		SccLocalPath1 = C:\\Users\\Baaleos\\TFS\\RhunDownloader\\RhunDownloader\\RhunDLL
 		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = G:\\Asmodei\\AsmodeiPortal\\AsmodeiServices\\AsmodeiServices.csproj
+		SccProjectName2 = $/Asmodei/AsmodeiPortal/AsmodeiServices
+		SccAuxPath2 = http://asmodei.net:8080/tfs/development
+		SccLocalPath2 = G:\\Asmodei\\AsmodeiPortal\\AsmodeiServices
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +71,16 @@ Global
 		{3DAF5882-F38A-4C04-8D22-4C6B7D820B38}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3DAF5882-F38A-4C04-8D22-4C6B7D820B38}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3DAF5882-F38A-4C04-8D22-4C6B7D820B38}.Release|Win32.ActiveCfg = Release|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F534E484-2E57-424D-8A4B-36DC8AD1E505}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
