@@ -58,8 +58,6 @@
     <Compile Include="NetworkResources\NWNListener.cs" />
     <Compile Include="NetworkResources\RunScript.cs" />
     <Compile Include="NWNDefinitions\AppManager.cs" />
-    <Compile Include="NWNDefinitions\Entities\CGenericObject.cs" />
-    <Compile Include="NWNDefinitions\Entities\Creature.cs" />
     <Compile Include="NWNDefinitions\ServerExoApp.cs" />
     <Compile Include="NWNInternals\Internals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

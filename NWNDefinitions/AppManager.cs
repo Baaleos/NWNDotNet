@@ -2,36 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Diagnostics;
+
 namespace NWNDotNet.NWNDefinitions
 {
-    public class AppManager
+    class AppManager
     {
-        public AppManager()
+        static AppManager()
         {
             //  0x0066c050
-            //FinalAddress = (uint)AccessMemory.ProcessMemory.ReadPointer(0x0066c050);
-            //FinalAddress = (uint)AccessMemory.ProcessMemory.ReadPointer(FinalAddress);
+            FinalAddress = (uint)AccessMemory.ProcessMemory.ReadPointer(0x0066c050);
+            FinalAddress = (uint)AccessMemory.ProcessMemory.ReadPointer(FinalAddress);
         }
-        public static uint FinalAddress = setupAddress();
+        public static uint FinalAddress = 0x0;
 
-        private static uint setupAddress()
-        {
-            if (FinalAddress == 0x0)
-            {
-                //System.Windows.Forms.MessageBox.Show("Setting up");
-                uint uPointVal = (uint)AccessMemory.ReadPointer(0x0066c050);
-                //System.Windows.Forms.MessageBox.Show("Got " + uPointVal.ToString());
 
-                FinalAddress = uPointVal;
-                return uPointVal;
-            }
-            else
-            {
-                return FinalAddress;
-            }
-        }
-        public ServerExoApp ServerExoApp = new ServerExoApp();
+        public static ServerExoApp ServerExoApp = new ServerExoApp();
 
 
     }

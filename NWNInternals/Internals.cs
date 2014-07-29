@@ -6,9 +6,9 @@ using WhiteMagic;
 using NWNDotNet.NWNDefinitions;
 namespace NWNDotNet.NWNInternals
 {
-    public static class Internals
+    class Internals
     {
-        public static AppManager AppMananger = new AppManager(); //0x0066c050;
+        private static AppManager AppMananger = new AppManager(); //0x0066c050;
         private static uint NWN_VirtualMachine = 0x0066C048;
         private static uint NWN_CTlkTable = 0x0066C054;
         private static uint NWN_CNWTlkTable = 0x0066C058;
